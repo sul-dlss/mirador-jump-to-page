@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/mirador-combined.css">
+    <title>Mirador Viewer</title>
+    <style type="text/css">
+     #viewer {
+       width: 100%;
+       height: 100%;
+       position: fixed;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="viewer"></div>
+    <script src="mirador.min.js"></script>
+    <script src="../jump_to_page.js"></script>
+    <script type="text/javascript">
+     // We just include the plugin directly after loading Mirador,
+     // and the rest is handled for us from the manifest data.
+     //
+     // Any desired styling can be added as desired by the
+     // implementer, in the style block at the top of this
+     // page for example.
+     //
+     // Below follows the typical mirador consiguration, no extra
+     // configuration required.
+
+     $(function() {
+       // Called without "let" or "var"
+       // so we can play with it in the browser
+       myMiradorInstance = Mirador({
+         id: "viewer",
+         layout: "1x2",
+         buildPath: '',
+         data: [
+           { "manifestUri": "https://purl.stanford.edu/qm670kv1873/iiif/manifest", "location": "Stanford University"},
+           { "manifestUri": "https://purl.stanford.edu/jr903ng8662/iiif/manifest", "location": "Stanford University"},
+           { "manifestUri": "https://purl.stanford.edu/rd447dz7630/iiif/manifest", "location": "Stanford University"}
+         ],
+         windowObjects: [{
+           loadedManifest: "https://purl.stanford.edu/jr903ng8662/iiif/manifest"
+         }],
+      });
+     });
+    </script>
+  </body>
+</html>

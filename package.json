@@ -1,0 +1,24 @@
+{
+  "name": "mirador-jump-to-page",
+  "version": "1.0.0",
+  "description": "A mirador plugin to add a canvas label dropdown for navigation.",
+  "main": "jump_to_page.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "IIIF",
+    "mirador"
+  ],
+  "author": "Drew Winget <scipioaffricanus@gmail.com> (https://aeschylus.net/)",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "mirador": "^2.6.0"
+  },
+  "dependencies": {
+  }
+}
